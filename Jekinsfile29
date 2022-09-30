@@ -1,20 +1,4 @@
 node{
-  stage('1cloneCode'){}
-  stage('2Test&Build'){}
-  stage('3codeQuality'){}
-  stage('4uploadArtifacts'){}
-  stage('5deploy2UAT'){}
-  stage('6approvalGate'){}
-  stage('7deploy2Prod'){}
-  stage('8emailNotification'){}
-} 
-==============================================
-https://github.com/LandmakTechnology/maven-web-application
-https://github.com/LandmakTechnology/maven-web-app = private  Repo
-single line comment in groovy  = //  
-multi-line comment in groovy  =  /*  */
-
-node{
   def mavenHome = tool name: 'maven3.8.6'
   stage('1cloneCode'){
     git "https://github.com/LandmakTechnology/maven-web-application"
